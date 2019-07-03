@@ -1,0 +1,212 @@
+@charset "utf-8";
+@import "compass/reset";
+@import "compass/css3";
+@import "wap-scss/iconfont";
+@import "wap-scss/base";
+@import "wap-scss/form";
+@import "wap-scss/css3";
+@mixin bg_config($url) {
+    background-image: url($url);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+@media screen and (min-width:640px) {
+
+  html,
+  body {
+    width: 640px;
+    margin: auto;
+  }
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  min-height: 100%;
+  background: #1996e6;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/*******************banner*******************************/
+
+#banner {
+    position: relative;
+    width: 7.5rem;
+    height: 8.6rem;
+    padding-bottom: 0.4rem;
+    background: linear-gradient(-180deg, #45d6db 0%, #43cce3 30%, #1e99e8 100%);
+    overflow:hidden;
+
+    .logo {
+        position: absolute;
+        width: 2.1rem;
+        height: 0.6rem;
+        top: 0.2rem;
+        left: 0.4rem;
+        @include bg_config('../images/logo.png');
+
+    }
+    .main-content {
+        width: 6.8rem;
+        height: 7rem;
+        margin: 0 auto;
+        margin-top: 1rem;
+        @include bg_config('../images/banner.png');
+    }
+    .mySwiper {
+      position: absolute;
+      top: .1rem;
+      right: -0.3rem;
+      width: 4.11rem;
+      height: .58rem;
+      line-height: .58rem;
+      background: transparent;
+      border: 1px solid #fff;
+      border-radius: .58rem;
+      .swiper-slide {
+        .swiper-tips {
+          height: .58rem;
+          width: 100%;
+          line-height: .58rem;
+          font-size: .28rem;
+          color: #fff;
+          text-align: center;
+          // .tips-left {
+          //   width: 2.48rem;
+          //   padding-left: .4rem;
+          //   text-align: left;
+          // }
+          // .tip-right {
+          //   float: right;
+          //   width: 2rem;
+          //   padding-right: .4rem;
+          //   text-align: right;
+          // }
+        }
+    }
+  }
+}
+
+
+/*******************container*******************************/
+#container {
+  position: relative;
+  z-index: 2;
+  margin-top: -2rem;
+  .title {
+    font-size: 0.3rem;
+    color: #fff;
+    margin-bottom: 0.2rem;
+    text-align: center;
+  }
+}
+
+
+/* 倒计时 */
+.count-main {
+  background: #fff;
+  text-align: center;
+  padding: .1rem 0;
+  font-size: .24rem;
+  color: #333;
+  font-size: .32rem;
+
+  .c-countDown-time {
+    position: relative;
+    width: .42rem;
+    height: .46rem;
+    line-height: .46rem;
+    background: #313131;
+    background-image: linear-gradient(to bottom, #414141, #333333);
+    color: #fff;
+    display: inline-block;
+    margin-right: .09rem;
+    border-radius: .08rem;
+    font-size: .36rem;
+    font-weight: 800;
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background: #fff;
+      top: 50%;
+      left: 0;
+      margin-top: -1px;
+    }
+  }
+}
+
+.btn-receive {
+  display: block;
+  width: 100%;
+  height: .96rem;
+  border-radius: .48rem;
+  border: none;
+  background: #f98412;
+  color: #fff;
+  line-height: .96rem;
+  opacity: 1;
+  font-size: .4rem;
+  letter-spacing: 2px;
+  margin-top: .28rem;
+}
+
+.detail-main {
+  width: 6.89rem;
+  height: 4.18rem;
+  background: #59b5f0;
+  border-radius: .3rem;
+  margin: 2.3rem auto;
+  padding: .43rem .32rem .5rem;
+  .content {
+    width: 6.28rem;
+    height: 2.67rem;
+    margin: 0 auto;
+    @include bg_config('../images/gift.png');
+
+  }
+  .title {
+    font-size: .45rem;
+    color: #fff;
+    position: relative;
+    text-align: center;
+    margin-top: 0.3rem;
+    &:before{
+      display: inline-block;
+      content: '';
+      margin:  0 .1rem;
+      vertical-align: middle;
+      // position: absolute;
+      // top: 50%;
+      // margin-top: -1px;
+      width: 0.27rem;
+      height: 0.23rem;
+      @include bg_config("../images/arrow.png");
+    }
+  }
+
+  .img-detail {
+    width: 100%;
+    margin-top: .43rem;
+    display: block;
+  }
+}
+
+/********************footer************************/
+#footer {}
+
+/**
+ * layer
+ */
+@import "wap-scss/layer";
